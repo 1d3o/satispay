@@ -1,0 +1,1 @@
+# Satispay Ruby API
