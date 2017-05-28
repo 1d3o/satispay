@@ -119,4 +119,16 @@ RSpec.describe Satispay do
 
   end
 
+  context 'create new refund' do
+
+    it 'should return new refund informations' do
+      # user_data = satispay.create_user(phone_number: existing_user_phone_number)
+      # charge_data = satispay.create_charge(user_id: user_data['id'], currency: 'EUR', amount: 115)
+      # response = satispay.create_refund(charge_id: charge_data['id'], currency: 'EUR', amount: 100)
+      # puts response
+      # NB: Not tested because of a 500 error message
+    end
+
+  end
+
 end

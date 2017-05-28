@@ -58,6 +58,11 @@ class Satispay
     send_request('/online/v1/refunds', :get, {})
   end
 
+  def create_refund(args)
+    args = validate_args(args, [:charge_id, :currency, :amount])
+    send_request('/online/v1/refunds', :post, args)
+  end
+
   private
 
   # This function send a request to a specific url and return the response or
