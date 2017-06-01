@@ -3,8 +3,8 @@ require './lib/satispay'
 RSpec.describe Satispay do
 
   # Set here satispay informations for tests
-  security_bearer = 'osh_34ough7c6g2rkr0vkh2lrvjqj009setp54r4n2me991lekuv76go0glmiu9e74la49jae5t2j9l28l0l4lvndv2qg3fpfssn2133d4u4i86d2ek278lp2c3g5hdddtorsfrfct3mu50o9ljl5go8bovdqtg4tusnflji6p51np2envhhg1l5m3kjcbl5h1rac6m92831'
-  existing_user_phone_number = '+393459210580'
+  security_bearer = 'your_security_code'
+  existing_user_phone_number = 'your_phone_number'
 
   satispay = Satispay.new('staging', security_bearer)
 
