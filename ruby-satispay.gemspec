@@ -10,8 +10,8 @@ Gem::Specification.new do |s|
   s.summary       = ""
   s.description   = ""
   s.license       = "MIT"
-  s.files         = Dir["lib/**/*", "MIT-LICENSE", "Rakefile", "README.md"]
   s.require_paths = ["lib"]
+  s.files         = Dir["lib/satispay.rb", "MIT-LICENSE", "Rakefile", "README.md"]
 
   # Dependencies:
 
