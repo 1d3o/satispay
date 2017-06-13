@@ -16,6 +16,7 @@ Gem::Specification.new do |s|
   # Dependencies:
 
   s.add_dependency "rest-client"
+  s.add_dependency "json"
 
   # Dev dependencies:
 

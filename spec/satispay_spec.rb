@@ -6,7 +6,7 @@ RSpec.describe Satispay do
   security_bearer = 'your_security_code'
   existing_user_phone_number = 'your_phone_number'
 
-  satispay = Satispay::Client.new('staging', security_bearer)
+  satispay = Satispay.new('staging', security_bearer)
 
   # Bearer requests:
 
