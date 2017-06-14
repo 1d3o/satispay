@@ -18,7 +18,7 @@ Allow application to check if bearer is valid.
 response = satispay.check_bearer
 ```
 
-## Get all users
+### Get all users
 
 TODO: Continue
 
