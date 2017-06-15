@@ -20,5 +20,19 @@ response = satispay.check_bearer
 
 ### Get all users
 
-TODO: Continue
+```ruby
+response = satispay.all_users
+```
+
+### Create new user
+
+```ruby
+response = satispay.create_user(phone_number: user_phone_number)
+```
+
+### Get user
+
+```ruby
+response = satispay.get_user(user_id: user_satispay_id)
+```
 
