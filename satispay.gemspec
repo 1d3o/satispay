@@ -8,7 +8,7 @@ Gem::Specification.new do |s|
   s.version       = '1.0.2'
   s.authors       = ['Ideonetwork']
   s.email         = ['info@ideonetwork.it']
-  s.homepage      = 'http://naturaldesign.cc/'
+  s.homepage      = 'http://ideonetwork.it/'
   s.summary       = 'Unofficial Satispay API for Ruby'
   s.description   = 'Unofficial Satispay API for Ruby (porting from https://github.com/satispay/online-api-php-sdk)'
   s.license       = 'MIT'
