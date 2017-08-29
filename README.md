@@ -24,11 +24,15 @@ response = satispay.check_bearer
 response = satispay.all_users(*extra_params)
 ```
 
+For extra params info watch the official documentation: https://s3-eu-west-1.amazonaws.com/docs.online.satispay.com/index.html#get-a-user-list
+
 ### Create new user
 
 ```ruby
 response = satispay.create_user(phone_number: user_phone_number, *extra_params)
 ```
+
+For extra params info watch the official documentation: https://s3-eu-west-1.amazonaws.com/docs.online.satispay.com/index.html#create-a-user
 
 ### Get user
 
@@ -42,11 +46,16 @@ response = satispay.get_user(user_id: user_satispay_id)
 response = satispay.all_charges(*extra_params)
 ```
 
+For extra params info watch the official documentation: https://s3-eu-west-1.amazonaws.com/docs.online.satispay.com/index.html#get-a-charge-list
+
 ### Create new charges
 
 ```ruby
 response = satispay.create_charge(user_id: user_id, currency: 'EUR', amount: 100, *extra_params)
 ```
+
+For extra params info watch the official documentation: 
+https://s3-eu-west-1.amazonaws.com/docs.online.satispay.com/index.html#create-a-charge
 
 ### Get charge
 
@@ -61,9 +70,14 @@ response = satispay.get_charge(charge_id: charge_id)
 response = satispay.update_charge(charge_id: charge_id, *extra_params)
 ```
 
+For extra params info watch the official documentation: 
+https://s3-eu-west-1.amazonaws.com/docs.online.satispay.com/index.html#update-a-charge
+
 ### Get all refunds
 
 ```ruby
 response = satispay.all_refunds(*extra_params)
 ```
+
+For extra params info watch the official documentation: https://s3-eu-west-1.amazonaws.com/docs.online.satispay.com/index.html#get-a-refunds-list
 
