@@ -1,6 +1,9 @@
+# frozen_string_literal: true
+
 require 'rest-client'
 require 'json'
 
+# Satispay.
 class Satispay
 
   def initialize(env, security_bearer)
