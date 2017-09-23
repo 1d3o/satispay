@@ -1,5 +1,7 @@
 # Satispay Ruby API
 
+Full documentation here: https://ideonetwork.github.io/ruby-satispay/
+
 ## Usage
 
 To use the API you need to initialize a new instance
