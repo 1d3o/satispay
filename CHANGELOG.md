@@ -3,6 +3,7 @@
 ## Version 1.0.2
 
 - Update documentation (added links to official Satispay documentation).
+- Update gem structure.
 
 ## Version 1.0.1
 

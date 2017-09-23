@@ -1,0 +1,486 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+<meta charset="UTF-8">
+
+<title>class Satispay::Api - Satispay Gem</title>
+
+<script type="text/javascript">
+  var rdoc_rel_prefix = "../";
+  var index_rel_prefix = "../";
+</script>
+
+<script src="../js/jquery.js"></script>
+<script src="../js/darkfish.js"></script>
+
+<link href="../css/fonts.css" rel="stylesheet">
+<link href="../css/rdoc.css" rel="stylesheet">
+
+
+
+<body id="top" role="document" class="class">
+<nav role="navigation">
+  <div id="project-navigation">
+    <div id="home-section" role="region" title="Quick navigation" class="nav-section">
+  <h2>
+    <a href="../index.html" rel="home">Home</a>
+  </h2>
+
+  <div id="table-of-contents-navigation">
+    <a href="../table_of_contents.html#pages">Pages</a>
+    <a href="../table_of_contents.html#classes">Classes</a>
+    <a href="../table_of_contents.html#methods">Methods</a>
+  </div>
+</div>
+
+    <div id="search-section" role="search" class="project-section initially-hidden">
+  <form action="#" method="get" accept-charset="utf-8">
+    <div id="search-field-wrapper">
+      <input id="search-field" role="combobox" aria-label="Search"
+             aria-autocomplete="list" aria-controls="search-results"
+             type="text" name="search" placeholder="Search" spellcheck="false"
+             title="Type to search, Up and Down to navigate, Enter to load">
+    </div>
+
+    <ul id="search-results" aria-label="Search Results"
+        aria-busy="false" aria-expanded="false"
+        aria-atomic="false" class="initially-hidden"></ul>
+  </form>
+</div>
+
+  </div>
+
+  
+
+  <div id="class-metadata">
+    
+    <div id="parent-class-section" class="nav-section">
+  <h3>Parent</h3>
+
+  
+  <p class="link">Object
+  
+</div>
+
+    
+    
+    <!-- Method Quickref -->
+<div id="method-list-section" class="nav-section">
+  <h3>Methods</h3>
+
+  <ul class="link-list" role="directory">
+    
+    <li ><a href="#method-c-new">::new</a>
+    
+    <li ><a href="#method-i-all_charges">#all_charges</a>
+    
+    <li ><a href="#method-i-all_refunds">#all_refunds</a>
+    
+    <li ><a href="#method-i-all_users">#all_users</a>
+    
+    <li ><a href="#method-i-check_bearer">#check_bearer</a>
+    
+    <li ><a href="#method-i-create_charge">#create_charge</a>
+    
+    <li ><a href="#method-i-create_user">#create_user</a>
+    
+    <li ><a href="#method-i-get_charge">#get_charge</a>
+    
+    <li ><a href="#method-i-get_user">#get_user</a>
+    
+    <li ><a href="#method-i-update_charge">#update_charge</a>
+    
+  </ul>
+</div>
+
+  </div>
+</nav>
+
+<main role="main" aria-labelledby="class-Satispay::Api">
+  <h1 id="class-Satispay::Api" class="class">
+    class Satispay::Api
+  </h1>
+
+  <section class="description">
+    
+<p><a href="Api.html">Api</a>.</p>
+
+  </section>
+
+  
+  
+  
+  <section id="5Buntitled-5D" class="documentation-section">
+    
+
+    
+
+    
+
+    
+
+    
+     <section id="public-class-5Buntitled-5D-method-details" class="method-section">
+       <header>
+         <h3>Public Class Methods</h3>
+       </header>
+
+    
+      <div id="method-c-new" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">new</span><span
+            class="method-args">(env, security_bearer)</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          
+          
+          
+
+          
+          <div class="method-source-code" id="new-source">
+            <pre><span class="ruby-comment"># File lib/satispay/api.rb, line 12</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">initialize</span>(<span class="ruby-identifier">env</span>, <span class="ruby-identifier">security_bearer</span>)
+  <span class="ruby-ivar">@env</span> = (<span class="ruby-identifier">env</span> <span class="ruby-operator">==</span> <span class="ruby-string">&#39;prod&#39;</span> <span class="ruby-operator">?</span> <span class="ruby-value">:production</span> <span class="ruby-operator">:</span> <span class="ruby-value">:staging</span>)
+  <span class="ruby-ivar">@url</span> = (<span class="ruby-identifier">env</span> <span class="ruby-operator">==</span> <span class="ruby-string">&#39;prod&#39;</span> <span class="ruby-operator">?</span> <span class="ruby-string">&#39;https://authservices.satispay.com&#39;</span> <span class="ruby-operator">:</span> <span class="ruby-string">&#39;https://staging.authservices.satispay.com&#39;</span>)
+  <span class="ruby-ivar">@security_bearer</span> = <span class="ruby-identifier">security_bearer</span>
+<span class="ruby-keyword">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+    </section>
+  
+     <section id="public-instance-5Buntitled-5D-method-details" class="method-section">
+       <header>
+         <h3>Public Instance Methods</h3>
+       </header>
+
+    
+      <div id="method-i-all_charges" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">all_charges</span><span
+            class="method-args">()</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          
+          
+          
+
+          
+          <div class="method-source-code" id="all_charges-source">
+            <pre><span class="ruby-comment"># File lib/satispay/api.rb, line 36</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">all_charges</span>
+  <span class="ruby-identifier">send_request</span>(<span class="ruby-string">&#39;/online/v1/charges&#39;</span>, <span class="ruby-value">:get</span>, {})
+<span class="ruby-keyword">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+      <div id="method-i-all_refunds" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">all_refunds</span><span
+            class="method-args">()</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          
+          
+          
+
+          
+          <div class="method-source-code" id="all_refunds-source">
+            <pre><span class="ruby-comment"># File lib/satispay/api.rb, line 55</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">all_refunds</span>
+  <span class="ruby-identifier">send_request</span>(<span class="ruby-string">&#39;/online/v1/refunds&#39;</span>, <span class="ruby-value">:get</span>, {})
+<span class="ruby-keyword">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+      <div id="method-i-all_users" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">all_users</span><span
+            class="method-args">()</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          
+          
+          
+
+          
+          <div class="method-source-code" id="all_users-source">
+            <pre><span class="ruby-comment"># File lib/satispay/api.rb, line 22</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">all_users</span>
+  <span class="ruby-identifier">send_request</span>(<span class="ruby-string">&#39;/online/v1/users&#39;</span>, <span class="ruby-value">:get</span>, {})
+<span class="ruby-keyword">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+      <div id="method-i-check_bearer" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">check_bearer</span><span
+            class="method-args">()</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          
+          
+          
+
+          
+          <div class="method-source-code" id="check_bearer-source">
+            <pre><span class="ruby-comment"># File lib/satispay/api.rb, line 18</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">check_bearer</span>
+  <span class="ruby-identifier">send_request</span>(<span class="ruby-string">&#39;/wally-services/protocol/authenticated&#39;</span>, <span class="ruby-value">:get</span>, {})
+<span class="ruby-keyword">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+      <div id="method-i-create_charge" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">create_charge</span><span
+            class="method-args">(args)</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          
+          
+          
+
+          
+          <div class="method-source-code" id="create_charge-source">
+            <pre><span class="ruby-comment"># File lib/satispay/api.rb, line 40</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">create_charge</span>(<span class="ruby-identifier">args</span>)
+  <span class="ruby-identifier">args</span> = <span class="ruby-identifier">validate_args</span>(<span class="ruby-identifier">args</span>, [<span class="ruby-value">:user_id</span>, <span class="ruby-value">:currency</span>, <span class="ruby-value">:amount</span>])
+  <span class="ruby-identifier">send_request</span>(<span class="ruby-string">&#39;/online/v1/charges&#39;</span>, <span class="ruby-value">:post</span>, <span class="ruby-identifier">args</span>)
+<span class="ruby-keyword">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+      <div id="method-i-create_user" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">create_user</span><span
+            class="method-args">(args)</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          
+          
+          
+
+          
+          <div class="method-source-code" id="create_user-source">
+            <pre><span class="ruby-comment"># File lib/satispay/api.rb, line 26</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">create_user</span>(<span class="ruby-identifier">args</span>)
+  <span class="ruby-identifier">args</span> = <span class="ruby-identifier">validate_args</span>(<span class="ruby-identifier">args</span>, [<span class="ruby-value">:phone_number</span>])
+  <span class="ruby-identifier">send_request</span>(<span class="ruby-string">&#39;/online/v1/users&#39;</span>, <span class="ruby-value">:post</span>, <span class="ruby-identifier">args</span>)
+<span class="ruby-keyword">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+      <div id="method-i-get_charge" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">get_charge</span><span
+            class="method-args">(args)</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          
+          
+          
+
+          
+          <div class="method-source-code" id="get_charge-source">
+            <pre><span class="ruby-comment"># File lib/satispay/api.rb, line 45</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">get_charge</span>(<span class="ruby-identifier">args</span>)
+  <span class="ruby-identifier">args</span> = <span class="ruby-identifier">validate_args</span>(<span class="ruby-identifier">args</span>, [<span class="ruby-value">:charge_id</span>])
+  <span class="ruby-identifier">send_request</span>(<span class="ruby-node">&quot;/online/v1/charges/#{args[:charge_id]}&quot;</span>, <span class="ruby-value">:get</span>, {})
+<span class="ruby-keyword">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+      <div id="method-i-get_user" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">get_user</span><span
+            class="method-args">(args)</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          
+          
+          
+
+          
+          <div class="method-source-code" id="get_user-source">
+            <pre><span class="ruby-comment"># File lib/satispay/api.rb, line 31</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">get_user</span>(<span class="ruby-identifier">args</span>)
+  <span class="ruby-identifier">args</span> = <span class="ruby-identifier">validate_args</span>(<span class="ruby-identifier">args</span>, [<span class="ruby-value">:user_id</span>])
+  <span class="ruby-identifier">send_request</span>(<span class="ruby-node">&quot;/online/v1/users/#{args[:user_id]}&quot;</span>, <span class="ruby-value">:get</span>, {})
+<span class="ruby-keyword">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+      <div id="method-i-update_charge" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">update_charge</span><span
+            class="method-args">(args)</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          
+          
+          
+
+          
+          <div class="method-source-code" id="update_charge-source">
+            <pre><span class="ruby-comment"># File lib/satispay/api.rb, line 50</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">update_charge</span>(<span class="ruby-identifier">args</span>)
+  <span class="ruby-identifier">args</span> = <span class="ruby-identifier">validate_args</span>(<span class="ruby-identifier">args</span>, [<span class="ruby-value">:charge_id</span>])
+  <span class="ruby-identifier">send_request</span>(<span class="ruby-node">&quot;/online/v1/charges/#{args[:charge_id]}&quot;</span>, <span class="ruby-value">:put</span>, <span class="ruby-identifier">args</span>)
+<span class="ruby-keyword">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+    </section>
+  
+  </section>
+</main>
+
+
+<footer id="validator-badges" role="contentinfo">
+  <p><a href="http://validator.w3.org/check/referer">Validate</a>
+  <p>Generated by <a href="https://rdoc.github.io/rdoc">RDoc</a> 5.1.0.
+  <p>Based on <a href="http://deveiate.org/projects/Darkfish-RDoc/">Darkfish</a> by <a href="http://deveiate.org">Michael Granger</a>.
+</footer>
+

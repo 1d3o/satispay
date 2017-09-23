@@ -7,7 +7,7 @@ Full documentation here: https://ideonetwork.github.io/ruby-satispay/
 To use the API you need to initialize a new instance
 
 ```ruby
-satispay = Satispay.new(env, security_bearer)
+satispay = Satispay::Api.new(env, security_bearer)
 
 # NB: env sholud be 'prod' or 'staging'
 ```

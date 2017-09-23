@@ -1,5 +1,5 @@
 --- !ruby/object:RDoc::Options
-title: "Evnt Gem"
+title: "Satispay Gem"
 encoding: UTF-8
 charset: UTF-8
 static_path: []
