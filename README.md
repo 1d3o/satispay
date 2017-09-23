@@ -81,3 +81,12 @@ response = satispay.all_refunds(*extra_params)
 
 For extra params info watch the official documentation: https://s3-eu-west-1.amazonaws.com/docs.online.satispay.com/index.html#get-a-refunds-list
 
+## Development
+
+To update the documentation run:
+
+```console
+
+rdoc --op docs
+
+```
