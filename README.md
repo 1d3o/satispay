@@ -2,6 +2,14 @@
 
 Full documentation here: https://ideonetwork.github.io/ruby-satispay/
 
+## Installation
+
+To use the gem you need to add it on your Gemfile
+
+```ruby
+gem 'satispay'
+```
+
 ## Usage
 
 To use the API you need to initialize a new instance
