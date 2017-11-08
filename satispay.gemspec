@@ -14,8 +14,8 @@ Gem::Specification.new do |s|
   s.summary       = 'Unofficial Satispay API for Ruby'
   s.description   = 'Unofficial Satispay API for Ruby (porting from https://github.com/satispay/online-api-php-sdk)'
   s.license       = 'MIT'
+  s.files         = Dir['MIT-LICENSE', 'README.md', 'lib/**/*']
   s.require_paths = ['lib']
-  s.files         = Dir['lib']
 
   # Dependencies:
 
