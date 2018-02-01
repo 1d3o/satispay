@@ -1,11 +1,17 @@
 # Satispay Ruby API
 
-Full documentation here: https://ideonetwork.github.io/ruby-satispay/
+Full documentation here: https://ideonetwork.github.io/satispay/
 
 ## Installation
 
 To use the gem you need to add it on your Gemfile
 
+Latest version
+```ruby
+gem 'satispay', git: 'https://github.com/ideonetwork/satispay'
+```
+
+Legacy version
 ```ruby
 gem 'satispay'
 ```
