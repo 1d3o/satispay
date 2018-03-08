@@ -1,5 +1,7 @@
 # Satispay Ruby API
 
+[![Gem Version](https://badge.fury.io/rb/satispay.svg)](https://badge.fury.io/rb/satispay)
+
 Full documentation here: https://ideonetwork.github.io/satispay/
 
 ## Installation
