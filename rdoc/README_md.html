@@ -57,6 +57,7 @@
 
   <ul class="link-list" role="directory">
     <li><a href="#label-Satispay+Ruby+API">Satispay Ruby API</a>
+    <li><a href="#label-Installation">Installation</a>
     <li><a href="#label-Usage">Usage</a>
     <li><a href="#label-Check+bearer">Check bearer</a>
     <li><a href="#label-Get+all+users">Get all users</a>
@@ -68,6 +69,7 @@
     <li><a href="#label-Update+charge">Update charge</a>
     <li><a href="#label-Get+all+refunds">Get all refunds</a>
     <li><a href="#label-Development">Development</a>
+    <li><a href="#label-RDoc+documentation">RDoc documentation</a>
   </ul>
 </div>
 
@@ -79,6 +81,8 @@
   <ul class="link-list">
   
     <li><a href="./CHANGELOG_md.html">CHANGELOG</a>
+  
+    <li><a href="./MIT-LICENSE.html">MIT-LICENSE</a>
   
     <li><a href="./README_md.html">README</a>
   
@@ -92,8 +96,17 @@
 
 <h1 id="label-Satispay+Ruby+API"><a href="Satispay.html">Satispay</a> Ruby API<span><a href="#label-Satispay+Ruby+API">&para;</a> <a href="#top">&uarr;</a></span></h1>
 
-<p>Full documentation here: <a
-href="https://ideonetwork.github.io/ruby-satispay">ideonetwork.github.io/ruby-satispay</a>/</p>
+<p><a href="https://badge.fury.io/rb/satispay"><img
+src="https://badge.fury.io/rb/satispay.svg"></a></p>
+
+<h2 id="label-Installation">Installation<span><a href="#label-Installation">&para;</a> <a href="#top">&uarr;</a></span></h2>
+
+<p>To use the gem you need to add it on your Gemfile</p>
+
+<p>Latest version <code>ruby gem &#39;satispay&#39;, git:
+&#39;https://github.com/ideonetwork/satispay&#39; </code></p>
+
+<p>Legacy version <code>ruby gem &#39;satispay&#39; </code></p>
 
 <h2 id="label-Usage">Usage<span><a href="#label-Usage">&para;</a> <a href="#top">&uarr;</a></span></h2>
 
@@ -121,7 +134,7 @@ href="https://s3-eu-west-1.amazonaws.com/docs.online.satispay.com/index.html#get
 
 <h3 id="label-Create+new+user">Create new user<span><a href="#label-Create+new+user">&para;</a> <a href="#top">&uarr;</a></span></h3>
 
-<pre class="ruby"><span class="ruby-identifier">response</span> = <span class="ruby-identifier">satispay</span>.<span class="ruby-identifier">create_user</span>(<span class="ruby-identifier">phone_number</span><span class="ruby-operator">:</span> <span class="ruby-identifier">user_phone_number</span>, <span class="ruby-operator">*</span><span class="ruby-identifier">extra_params</span>)
+<pre class="ruby"><span class="ruby-identifier">response</span> = <span class="ruby-identifier">satispay</span>.<span class="ruby-identifier">create_user</span>(<span class="ruby-value">phone_number:</span> <span class="ruby-identifier">user_phone_number</span>, <span class="ruby-operator">*</span><span class="ruby-identifier">extra_params</span>)
 </pre>
 
 <p>For extra params info watch the official documentation: <a
@@ -129,7 +142,7 @@ href="https://s3-eu-west-1.amazonaws.com/docs.online.satispay.com/index.html#cre
 
 <h3 id="label-Get+user">Get user<span><a href="#label-Get+user">&para;</a> <a href="#top">&uarr;</a></span></h3>
 
-<pre class="ruby"><span class="ruby-identifier">response</span> = <span class="ruby-identifier">satispay</span>.<span class="ruby-identifier">get_user</span>(<span class="ruby-identifier">user_id</span><span class="ruby-operator">:</span> <span class="ruby-identifier">user_satispay_id</span>)
+<pre class="ruby"><span class="ruby-identifier">response</span> = <span class="ruby-identifier">satispay</span>.<span class="ruby-identifier">get_user</span>(<span class="ruby-value">user_id:</span> <span class="ruby-identifier">user_satispay_id</span>)
 </pre>
 
 <h3 id="label-Get+all+chanrges">Get all chanrges<span><a href="#label-Get+all+chanrges">&para;</a> <a href="#top">&uarr;</a></span></h3>
@@ -142,7 +155,7 @@ href="https://s3-eu-west-1.amazonaws.com/docs.online.satispay.com/index.html#get
 
 <h3 id="label-Create+new+charges">Create new charges<span><a href="#label-Create+new+charges">&para;</a> <a href="#top">&uarr;</a></span></h3>
 
-<pre class="ruby"><span class="ruby-identifier">response</span> = <span class="ruby-identifier">satispay</span>.<span class="ruby-identifier">create_charge</span>(<span class="ruby-identifier">user_id</span><span class="ruby-operator">:</span> <span class="ruby-identifier">user_id</span>, <span class="ruby-identifier">currency</span><span class="ruby-operator">:</span> <span class="ruby-string">&#39;EUR&#39;</span>, <span class="ruby-identifier">amount</span><span class="ruby-operator">:</span> <span class="ruby-value">100</span>, <span class="ruby-operator">*</span><span class="ruby-identifier">extra_params</span>)
+<pre class="ruby"><span class="ruby-identifier">response</span> = <span class="ruby-identifier">satispay</span>.<span class="ruby-identifier">create_charge</span>(<span class="ruby-value">user_id:</span> <span class="ruby-identifier">user_id</span>, <span class="ruby-value">currency:</span> <span class="ruby-string">&#39;EUR&#39;</span>, <span class="ruby-value">amount:</span> <span class="ruby-value">100</span>, <span class="ruby-operator">*</span><span class="ruby-identifier">extra_params</span>)
 </pre>
 
 <p>For extra params info watch the official documentation: <a
@@ -150,12 +163,12 @@ href="https://s3-eu-west-1.amazonaws.com/docs.online.satispay.com/index.html#cre
 
 <h3 id="label-Get+charge">Get charge<span><a href="#label-Get+charge">&para;</a> <a href="#top">&uarr;</a></span></h3>
 
-<pre class="ruby"><span class="ruby-identifier">response</span> = <span class="ruby-identifier">satispay</span>.<span class="ruby-identifier">get_charge</span>(<span class="ruby-identifier">charge_id</span><span class="ruby-operator">:</span> <span class="ruby-identifier">charge_id</span>)
+<pre class="ruby"><span class="ruby-identifier">response</span> = <span class="ruby-identifier">satispay</span>.<span class="ruby-identifier">get_charge</span>(<span class="ruby-value">charge_id:</span> <span class="ruby-identifier">charge_id</span>)
 </pre>
 
 <h3 id="label-Update+charge">Update charge<span><a href="#label-Update+charge">&para;</a> <a href="#top">&uarr;</a></span></h3>
 
-<pre class="ruby"><span class="ruby-identifier">response</span> = <span class="ruby-identifier">satispay</span>.<span class="ruby-identifier">update_charge</span>(<span class="ruby-identifier">charge_id</span><span class="ruby-operator">:</span> <span class="ruby-identifier">charge_id</span>, <span class="ruby-operator">*</span><span class="ruby-identifier">extra_params</span>)
+<pre class="ruby"><span class="ruby-identifier">response</span> = <span class="ruby-identifier">satispay</span>.<span class="ruby-identifier">update_charge</span>(<span class="ruby-value">charge_id:</span> <span class="ruby-identifier">charge_id</span>, <span class="ruby-operator">*</span><span class="ruby-identifier">extra_params</span>)
 </pre>
 
 <p>For extra params info watch the official documentation: <a
@@ -171,17 +184,18 @@ href="https://s3-eu-west-1.amazonaws.com/docs.online.satispay.com/index.html#get
 
 <h2 id="label-Development">Development<span><a href="#label-Development">&para;</a> <a href="#top">&uarr;</a></span></h2>
 
-<p>To update the documentation run:</p>
+<h3 id="label-RDoc+documentation">RDoc documentation<span><a href="#label-RDoc+documentation">&para;</a> <a href="#top">&uarr;</a></span></h3>
 
-<pre>
-rdoc --op docs</pre>
+<p>To update the rdoc documentation run:</p>
+
+<pre>rdoc --op rdoc</pre>
 </main>
 
 
 
 <footer id="validator-badges" role="contentinfo">
-  <p><a href="http://validator.w3.org/check/referer">Validate</a>
-  <p>Generated by <a href="https://rdoc.github.io/rdoc">RDoc</a> 5.1.0.
+  <p><a href="https://validator.w3.org/check/referer">Validate</a>
+  <p>Generated by <a href="https://ruby.github.io/rdoc/">RDoc</a> 6.0.1.
   <p>Based on <a href="http://deveiate.org/projects/Darkfish-RDoc/">Darkfish</a> by <a href="http://deveiate.org">Michael Granger</a>.
 </footer>
 

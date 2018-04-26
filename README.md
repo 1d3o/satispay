@@ -2,8 +2,6 @@
 
 [![Gem Version](https://badge.fury.io/rb/satispay.svg)](https://badge.fury.io/rb/satispay)
 
-Full documentation here: https://ideonetwork.github.io/satispay/
-
 ## Installation
 
 To use the gem you need to add it on your Gemfile
@@ -101,10 +99,11 @@ For extra params info watch the official documentation: https://s3-eu-west-1.ama
 
 ## Development
 
-To update the documentation run:
+### RDoc documentation
+
+To update the rdoc documentation run:
 
 ```console
-
-rdoc --op docs
-
+rdoc --op rdoc
 ```
+

@@ -109,8 +109,6 @@
   </section>
 
   
-  
-  
   <section id="5Buntitled-5D" class="documentation-section">
     
 
@@ -147,7 +145,7 @@
           
           <div class="method-source-code" id="new-source">
             <pre><span class="ruby-comment"># File lib/satispay/api.rb, line 12</span>
-<span class="ruby-keyword">def</span> <span class="ruby-identifier">initialize</span>(<span class="ruby-identifier">env</span>, <span class="ruby-identifier">security_bearer</span>)
+<span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">initialize</span>(<span class="ruby-identifier">env</span>, <span class="ruby-identifier">security_bearer</span>)
   <span class="ruby-ivar">@env</span> = (<span class="ruby-identifier">env</span> <span class="ruby-operator">==</span> <span class="ruby-string">&#39;prod&#39;</span> <span class="ruby-operator">?</span> <span class="ruby-value">:production</span> <span class="ruby-operator">:</span> <span class="ruby-value">:staging</span>)
   <span class="ruby-ivar">@url</span> = (<span class="ruby-identifier">env</span> <span class="ruby-operator">==</span> <span class="ruby-string">&#39;prod&#39;</span> <span class="ruby-operator">?</span> <span class="ruby-string">&#39;https://authservices.satispay.com&#39;</span> <span class="ruby-operator">:</span> <span class="ruby-string">&#39;https://staging.authservices.satispay.com&#39;</span>)
   <span class="ruby-ivar">@security_bearer</span> = <span class="ruby-identifier">security_bearer</span>
@@ -190,7 +188,7 @@
           
           <div class="method-source-code" id="all_charges-source">
             <pre><span class="ruby-comment"># File lib/satispay/api.rb, line 36</span>
-<span class="ruby-keyword">def</span> <span class="ruby-identifier">all_charges</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">all_charges</span>
   <span class="ruby-identifier">send_request</span>(<span class="ruby-string">&#39;/online/v1/charges&#39;</span>, <span class="ruby-value">:get</span>, {})
 <span class="ruby-keyword">end</span></pre>
           </div>
@@ -223,7 +221,7 @@
           
           <div class="method-source-code" id="all_refunds-source">
             <pre><span class="ruby-comment"># File lib/satispay/api.rb, line 55</span>
-<span class="ruby-keyword">def</span> <span class="ruby-identifier">all_refunds</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">all_refunds</span>
   <span class="ruby-identifier">send_request</span>(<span class="ruby-string">&#39;/online/v1/refunds&#39;</span>, <span class="ruby-value">:get</span>, {})
 <span class="ruby-keyword">end</span></pre>
           </div>
@@ -256,7 +254,7 @@
           
           <div class="method-source-code" id="all_users-source">
             <pre><span class="ruby-comment"># File lib/satispay/api.rb, line 22</span>
-<span class="ruby-keyword">def</span> <span class="ruby-identifier">all_users</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">all_users</span>
   <span class="ruby-identifier">send_request</span>(<span class="ruby-string">&#39;/online/v1/users&#39;</span>, <span class="ruby-value">:get</span>, {})
 <span class="ruby-keyword">end</span></pre>
           </div>
@@ -289,7 +287,7 @@
           
           <div class="method-source-code" id="check_bearer-source">
             <pre><span class="ruby-comment"># File lib/satispay/api.rb, line 18</span>
-<span class="ruby-keyword">def</span> <span class="ruby-identifier">check_bearer</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">check_bearer</span>
   <span class="ruby-identifier">send_request</span>(<span class="ruby-string">&#39;/wally-services/protocol/authenticated&#39;</span>, <span class="ruby-value">:get</span>, {})
 <span class="ruby-keyword">end</span></pre>
           </div>
@@ -322,7 +320,7 @@
           
           <div class="method-source-code" id="create_charge-source">
             <pre><span class="ruby-comment"># File lib/satispay/api.rb, line 40</span>
-<span class="ruby-keyword">def</span> <span class="ruby-identifier">create_charge</span>(<span class="ruby-identifier">args</span>)
+<span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">create_charge</span>(<span class="ruby-identifier">args</span>)
   <span class="ruby-identifier">args</span> = <span class="ruby-identifier">validate_args</span>(<span class="ruby-identifier">args</span>, [<span class="ruby-value">:user_id</span>, <span class="ruby-value">:currency</span>, <span class="ruby-value">:amount</span>])
   <span class="ruby-identifier">send_request</span>(<span class="ruby-string">&#39;/online/v1/charges&#39;</span>, <span class="ruby-value">:post</span>, <span class="ruby-identifier">args</span>)
 <span class="ruby-keyword">end</span></pre>
@@ -356,7 +354,7 @@
           
           <div class="method-source-code" id="create_user-source">
             <pre><span class="ruby-comment"># File lib/satispay/api.rb, line 26</span>
-<span class="ruby-keyword">def</span> <span class="ruby-identifier">create_user</span>(<span class="ruby-identifier">args</span>)
+<span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">create_user</span>(<span class="ruby-identifier">args</span>)
   <span class="ruby-identifier">args</span> = <span class="ruby-identifier">validate_args</span>(<span class="ruby-identifier">args</span>, [<span class="ruby-value">:phone_number</span>])
   <span class="ruby-identifier">send_request</span>(<span class="ruby-string">&#39;/online/v1/users&#39;</span>, <span class="ruby-value">:post</span>, <span class="ruby-identifier">args</span>)
 <span class="ruby-keyword">end</span></pre>
@@ -390,7 +388,7 @@
           
           <div class="method-source-code" id="get_charge-source">
             <pre><span class="ruby-comment"># File lib/satispay/api.rb, line 45</span>
-<span class="ruby-keyword">def</span> <span class="ruby-identifier">get_charge</span>(<span class="ruby-identifier">args</span>)
+<span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">get_charge</span>(<span class="ruby-identifier">args</span>)
   <span class="ruby-identifier">args</span> = <span class="ruby-identifier">validate_args</span>(<span class="ruby-identifier">args</span>, [<span class="ruby-value">:charge_id</span>])
   <span class="ruby-identifier">send_request</span>(<span class="ruby-node">&quot;/online/v1/charges/#{args[:charge_id]}&quot;</span>, <span class="ruby-value">:get</span>, {})
 <span class="ruby-keyword">end</span></pre>
@@ -424,7 +422,7 @@
           
           <div class="method-source-code" id="get_user-source">
             <pre><span class="ruby-comment"># File lib/satispay/api.rb, line 31</span>
-<span class="ruby-keyword">def</span> <span class="ruby-identifier">get_user</span>(<span class="ruby-identifier">args</span>)
+<span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">get_user</span>(<span class="ruby-identifier">args</span>)
   <span class="ruby-identifier">args</span> = <span class="ruby-identifier">validate_args</span>(<span class="ruby-identifier">args</span>, [<span class="ruby-value">:user_id</span>])
   <span class="ruby-identifier">send_request</span>(<span class="ruby-node">&quot;/online/v1/users/#{args[:user_id]}&quot;</span>, <span class="ruby-value">:get</span>, {})
 <span class="ruby-keyword">end</span></pre>
@@ -458,7 +456,7 @@
           
           <div class="method-source-code" id="update_charge-source">
             <pre><span class="ruby-comment"># File lib/satispay/api.rb, line 50</span>
-<span class="ruby-keyword">def</span> <span class="ruby-identifier">update_charge</span>(<span class="ruby-identifier">args</span>)
+<span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">update_charge</span>(<span class="ruby-identifier">args</span>)
   <span class="ruby-identifier">args</span> = <span class="ruby-identifier">validate_args</span>(<span class="ruby-identifier">args</span>, [<span class="ruby-value">:charge_id</span>])
   <span class="ruby-identifier">send_request</span>(<span class="ruby-node">&quot;/online/v1/charges/#{args[:charge_id]}&quot;</span>, <span class="ruby-value">:put</span>, <span class="ruby-identifier">args</span>)
 <span class="ruby-keyword">end</span></pre>
@@ -479,8 +477,8 @@
 
 
 <footer id="validator-badges" role="contentinfo">
-  <p><a href="http://validator.w3.org/check/referer">Validate</a>
-  <p>Generated by <a href="https://rdoc.github.io/rdoc">RDoc</a> 5.1.0.
+  <p><a href="https://validator.w3.org/check/referer">Validate</a>
+  <p>Generated by <a href="https://ruby.github.io/rdoc/">RDoc</a> 6.0.1.
   <p>Based on <a href="http://deveiate.org/projects/Darkfish-RDoc/">Darkfish</a> by <a href="http://deveiate.org">Michael Granger</a>.
 </footer>
 
